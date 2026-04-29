@@ -1,0 +1,119 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #c30175;
+}
+
+/* Navigation bar */
+nav ul {
+  display: flex;
+  justify-content: center;
+  background: #e53b88;
+  padding: 10px;
+}
+nav ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #d77aa4;
+}
+
+/* Hero section with background image */
+.hero {
+  text-align: center;
+  padding: 80px;
+  background: url("images/hero-bg.jpg") no-repeat center center/cover;
+  color: #df00b6;
+}
+.hero h1,
+.hero .tagline {
+  color: #c30175; /* same pink for name + tagline */
+}
+
+/* Buttons (used for both <button> and <a class="button">) */
+button, .button {
+  padding: 10px 20px;
+  border: 2px solid white; /* white border */
+  background: #b6206b;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 6px;
+}
+button:hover, .button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ea92be;
+  background: #9e1a5d; /* darker pink on hover */
+}
+
+/* Project cards */
+.project {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #fce0f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.project img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+/* Tables */
+table {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid #b4017e;
+  padding: 10px;
+}
+th {
+  background: #ff25a8;
+  color: white;
+}
+
+/* Timeline */
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+.timeline li {
+  margin: 10px 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Apply fade-in to hero text */
+.hero h1, .hero .tagline, .hero button {
+  animation: fadeIn 1.5s ease forwards;
+}
+.hero h1 { animation-delay: 0.2s; }
+.hero .tagline { animation-delay: 0.6s; }
+.hero button { animation-delay: 1s; }
+
+/* Fade-in for project images */
+.project img {
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
